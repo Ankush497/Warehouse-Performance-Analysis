@@ -105,7 +105,7 @@ The dataset is structured across multiple sheets (Lease Cost, Space Utilization,
 ## 👨‍💻 Author
 **Ankush Kumar**  
 📍 Data Analytics & Dashboard Enthusiast  
-📫 [LinkedIn](https://linkedin.com) | [GitHub](https://github.com)
+📫 [LinkedIn](https://www.linkedin.com/in/ankush-kumar-05511236a/)
 
 ---
 
