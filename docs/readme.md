@@ -32,21 +32,29 @@ The dataset is structured across multiple sheets (Lease Cost, Space Utilization,
 ## 🧠 SQL Analysis Requirements
 
 ### 🔹 Basic Analysis
-- Retrieve total lease cost allocated and used per month  
-- Calculate total claims and overtime %  
-- Find all unique months and warehouse IDs  
+- These help you practice SELECT, WHERE, ORDER BY, and simple aggregates.
+1.	Show all warehouses and their total inbound and outbound shipment counts. (Inbond & Outbond.csv)
+2.	List all warehouse locations with their space utilization percentage. (Space Utilization.csv)
+3.	Find the average overtime hours across all warehouses. (Reduce Overtime.csv)
+4.	Display the inventory turnover ratio for each month. (Inventory Turnover Ratio.csv)
+5.	List warehouses that have lease cost above average. (Lease Cost.csv)
 
 ### 🔹 Intermediate Analysis
-- Calculate savings (Lease Cost Allocated – Lease Cost Used)  
-- Compute space utilization efficiency `(Space_Used / Space_Allocated) * 100`  
-- Join inbound and outbound data for monthly comparison  
-- Rank months by highest savings  
+- These connect performance, cost, and space data.
+1.	Join Warehouse Performance.csv and Reduce Overtime.csv to find if higher overtime correlates with lower performance.
+→ Hint: JOIN on warehouse ID or name.
+2.	Combine Lease Cost.csv and Space Utilization.csv to find the cost per utilized square meter of space.
+3.	Use Inbond & Outbond.csv and Reduce Wrong Issuance.csv to find the error rate per total dispatch.
+4.	Join Reduce Claims.csv and Contractual Kpis.csv to compare actual claims with KPI targets.
+5.	Combine Inventory Turnover Ratio.csv with Warehouse Performance.csv to check how turnover affects warehouse score.
 
 ### 🔹 Advanced Analysis
-- Use CTEs to calculate cumulative savings  
-- Apply window functions for month-over-month trends  
-- Create performance categories using `CASE WHEN`  
-- Build a combined KPI summary using joins and aggregation  
+- These simulate real business analysis using multiple tables.
+1.	Build a query joining Warehouse Performance, Reduce Claims, and Reduce Wrong Issuance to find which warehouses have highest overall efficiency (least errors + highest performance).
+2.	Join Lease Cost, Space Utilization, and Warehouse Performance to find top 3 warehouses with the best performance-to-cost ratio.
+3.	Combine all related datasets (Inbond & Outbond, Reduce Overtime, Reduce Claims, Inventory Turnover Ratio) to create a monthly performance summary report for each warehouse.
+4.	Use subqueries to find warehouses where the inventory turnover is above average and lease cost is below average.
+5.	Create a KPI compliance report by joining Contractual Kpis, Warehouse Performance, and Reduce Overtime to check which warehouses meet or exceed contractual performance targets.
 
 ---
 
